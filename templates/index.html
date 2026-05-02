@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>E-Commerce Sales Insights</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="/static/css/style.css"/>
+</head>
+<body>
+
+<aside class="sidebar">
+  <div class="brand">
+    <div class="brand-mark">📊</div>
+    <div class="brand-title">E-Commerce<br>Insights</div>
+    <div class="brand-sub">Analytics Platform</div>
+  </div>
+  <nav class="nav">
+    <div class="nav-group-label">Main Menu</div>
+    <button class="nav-btn active" onclick="show('dashboard',this)">
+      <span class="nav-dot"></span> Dashboard
+    </button>
+    <button class="nav-btn" onclick="show('report',this)">
+      <span class="nav-dot"></span> Reports
+    </button>
+  </nav>
+  <div class="sidebar-foot">
+    TCS Industry Project<br>
+    E-Commerce Sales Insights<br>
+    Jan 2023 – Dec 2024
+  </div>
+</aside>
+
+<main class="main">
+
+  <!-- DASHBOARD -->
+  <div id="section-dashboard">
+    <div class="topbar">
+      <div>
+        <div class="topbar-title">Sales Dashboard</div>
+        <div class="topbar-sub">All transactions · January 2023 to December 2024</div>
+      </div>
+      <div class="pills">
+        <div class="pill pill-green"><span class="blink"></span> Live Data</div>
+        <div class="pill" id="dt"></div>
+      </div>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi">
+        <div class="kpi-bar"></div>
+        <div class="kpi-ico">💰</div>
+        <div class="kpi-label">Total Revenue</div>
+        <div class="kpi-val" id="k1">—</div>
+        <div class="kpi-hint">All-time earnings</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-bar"></div>
+        <div class="kpi-ico">🛒</div>
+        <div class="kpi-label">Total Orders</div>
+        <div class="kpi-val" id="k2">—</div>
+        <div class="kpi-hint">Unique transactions</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-bar"></div>
+        <div class="kpi-ico">📈</div>
+        <div class="kpi-label">Avg Order Value</div>
+        <div class="kpi-val" id="k3">—</div>
+        <div class="kpi-hint">Per transaction</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-bar"></div>
+        <div class="kpi-ico">👥</div>
+        <div class="kpi-label">Unique Customers</div>
+        <div class="kpi-val" id="k4">—</div>
+        <div class="kpi-hint">Registered buyers</div>
+      </div>
+    </div>
+
+    <div class="row r2">
+      <div class="card">
+        <div class="card-top">
+          <span class="card-ttl">Monthly Revenue Trend</span>
+          <span class="tag">24 Months</span>
+        </div>
+        <canvas id="cMonthly" height="100"></canvas>
+      </div>
+      <div class="card">
+        <div class="card-top">
+          <span class="card-ttl">Revenue by Category</span>
+          <span class="tag">6 Categories</span>
+        </div>
+        <canvas id="cCat" height="178"></canvas>
+      </div>
+    </div>
+
+    <div class="row r3">
+      <div class="card">
+        <div class="card-top">
+          <span class="card-ttl">Top 10 Products</span>
+          <span class="tag">By Revenue</span>
+        </div>
+        <canvas id="cProd" height="205"></canvas>
+      </div>
+      <div class="card">
+        <div class="card-top">
+          <span class="card-ttl">Payment Methods</span>
+          <span class="tag">Share</span>
+        </div>
+        <canvas id="cPay" height="205"></canvas>
+      </div>
+      <div class="card">
+        <div class="card-top">
+          <span class="card-ttl">Top Cities</span>
+          <span class="tag">By Revenue</span>
+        </div>
+        <canvas id="cCity" height="205"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- REPORTS -->
+  <div id="section-report">
+    <div class="topbar">
+      <div>
+        <div class="topbar-title">Generate Report</div>
+        <div class="topbar-sub">Export data as PDF or CSV for any date range</div>
+      </div>
+    </div>
+
+    <div class="rpt-hero">
+      <h2>Download Sales Report</h2>
+      <p>Select a date range and export a detailed branded report — KPIs, monthly breakdown, category analysis, top products, and payment insights included.</p>
+    </div>
+
+    <div class="rpt-form">
+      <h3>Select Date Range & Format</h3>
+      <div class="form-row">
+        <div class="fg">
+          <label>Start Date</label>
+          <input type="date" id="sd" value="2023-01-01"/>
+        </div>
+        <div class="fg">
+          <label>End Date</label>
+          <input type="date" id="ed" value="2024-12-31"/>
+        </div>
+        <button class="btn btn-blue" onclick="dl('pdf')">⬇ Download PDF</button>
+        <button class="btn btn-grn"  onclick="dl('csv')">⬇ Download CSV</button>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<div class="toast" id="toast">⏳ Generating your report...</div>
+
+<script src="/static/js/main.js"></script>
+</body>
+</html>
