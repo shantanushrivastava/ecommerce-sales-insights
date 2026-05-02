@@ -147,20 +147,4 @@ The dataset is synthetically generated with realistic e-commerce patterns:
 
 ---
 
-## 👨‍💻 Author
-
-**Shantanu Shrivastava**
-- 🎓 TCS Industry Mentorship Program
-- 📧 [your-email@example.com](mailto:your-email@example.com)
-- 🔗 [LinkedIn](https://linkedin.com/in/your-profile)
-- 💻 [GitHub](https://github.com/shantanushrivastava)
-
----
-
-## 📃 License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
 > ⭐ If you found this project helpful, please give it a star on GitHub!
