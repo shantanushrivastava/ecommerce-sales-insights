@@ -10,6 +10,11 @@
 
 ---
 
+## 🌐 Live Demo
+👉 [Click here to view Dashboard](https://ecommerce-sales-insights.onrender.com)
+
+---
+
 ## 📌 Overview
 
 A full-stack **Business Intelligence Dashboard** built for analyzing e-commerce transaction data. This project provides real-time sales insights through interactive visualizations, KPI tracking, and automated report generation — designed to support data-driven business decisions.
